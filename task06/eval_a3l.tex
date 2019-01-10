@@ -1,0 +1,39 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{multicol}
+\usepackage{amssymb}
+\usepackage[a3paper,landscape,margin=.2cm]{geometry}
+\usepackage{color,xcolor,prooftree,alltt}
+\usepackage{pgf,tikz, tikz-qtree}
+\renewcommand{\thefootnote}{~}
+%\tikzstyle{every node}=[ thin]%
+\newcommand{\exptree}[1]{%
+%
+\begin{center}
+\begin{tikzpicture}[level distance=.9cm,scale=.9]%
+#1%
+\end{tikzpicture}%
+\end{center}
+\footnote{The normal order evaluation.}
+%\footnote{The expansion without the shared nodes.}
+$\quad$\\
+\pagebreak
+}%
+\begin{document}
+\begin{tiny}
+\include{evaltree}
+\end{tiny}
+\end{document}

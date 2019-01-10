@@ -1,0 +1,29 @@
+digraph  G {
+node_0 [shape=record,label=".|{{null|false}|{first|1 2 3 }|{last|6 }|{follow|6 }}"]
+node_0  -> node_1;
+node_0  -> node_2;
+node_1 [shape=record,label=".|{{null|false}|{first|1 2 3 }|{last|5 }|{follow|6 }}"]
+node_1  -> node_3;
+node_1  -> node_4;
+node_3 [shape=record,label=".|{{null|false}|{first|1 2 3 }|{last|5 }|{follow|6 }}"]
+node_3  -> node_5;
+node_3  -> node_6;
+node_5 [shape=record,label=".|{{null|false}|{first|1 2 3 }|{last|4 }|{follow|5 }}"]
+node_5  -> node_7;
+node_5  -> node_8;
+node_7 [shape=record,label=".|{{null|false}|{first|1 2 3 }|{last|3 }|{follow|4 }}"]
+node_7  -> node_9;
+node_7  -> node_10;
+node_9 [shape=record,label="*|{{null|true}|{first|1 2 }|{last|1 2 }|{follow|3 }}"]
+node_9  -> node_11;
+node_11 [shape=record,label="\||{{null|false}|{first|1 2 }|{last|1 2 }|{follow|1 2 3 }}"]
+node_11  -> node_12;
+node_11  -> node_13;
+node_12 [shape=record,label="{a|pos|1}|{{null|false}|{first|1 }|{last|1 }|{follow|1 2 3 }}"]
+node_13 [shape=record,label="{b|pos|2}|{{null|false}|{first|2 }|{last|2 }|{follow|1 2 3 }}"]
+node_10 [shape=record,label="{a|pos|3}|{{null|false}|{first|3 }|{last|3 }|{follow|4 }}"]
+node_8 [shape=record,label="{b|pos|4}|{{null|false}|{first|4 }|{last|4 }|{follow|5 }}"]
+node_6 [shape=record,label="{b|pos|5}|{{null|false}|{first|5 }|{last|5 }|{follow|6 }}"]
+node_4 [shape=record,label="&epsilon;|{{null|true}|{first|empty}|{last|empty}|{follow|6 }}"]
+node_2 [shape=record,label="{$|pos|6}|{{null|false}|{first|6 }|{last|6 }|{follow|empty}}"]
+}
