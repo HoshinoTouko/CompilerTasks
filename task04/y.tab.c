@@ -235,7 +235,7 @@ typedef struct {
 } YYSTACKDATA;
 /* variables for the parser stack */
 static YYSTACKDATA yystack;
-#line 79 "grammar.y"
+#line 77 "grammar.y"
 
 void yyerror ( char const *s)
 {
@@ -245,10 +245,7 @@ void yyerror ( char const *s)
 extern FILE * yyin;
 int main ()
 {
-  if ((texfile = fopen("expr.tex", "w")) == NULL) {
-    printf("exit(1)\n");
-    exit(1);
-  }
+  if ((texfile = fopen("expr.tex", "w")) == NULL) exit(1);
 
   printf("please input a lambda term with \";\":\n");  
   
@@ -256,7 +253,7 @@ int main ()
   fclose(texfile);
   return 0;
 }
-#line 258 "y.tab.c"
+#line 255 "y.tab.c"
 
 #if YYDEBUG
 #include <stdio.h>		/* needed for printf */
@@ -482,50 +479,47 @@ case 7:
 #line 44 "grammar.y"
 	{
   /* TODO */
-  int depth = find_deepth( yystack.l_mark[0] -> lchild );
-  yyval = make_var( depth );
-  yyval -> lchild = yystack.l_mark[0] -> lchild;
+  yystack.l_mark[0]->value = find_deepth((char *)yystack.l_mark[0]->lchild);
+  yyval = yystack.l_mark[0];
  }
 break;
 case 8:
-#line 51 "grammar.y"
+#line 50 "grammar.y"
 	{ 
   /* TODO */ 
-  yyval = make_cond( yystack.l_mark[-5], yystack.l_mark[-3], yystack.l_mark[-1] );
+  yyval = make_cond(yystack.l_mark[-5], yystack.l_mark[-3], yystack.l_mark[-1]);
   }
 break;
 case 9:
-#line 56 "grammar.y"
+#line 55 "grammar.y"
 	{ 
   /* TODO */ 
-  yyval = yystack.l_mark[-1];
+  yyval = yystack.l_mark[-1]; 
   }
 break;
 case 10:
-#line 61 "grammar.y"
+#line 60 "grammar.y"
 	{ 
-  /* TODO (midaction)*/
-  name_env[current] = yystack.l_mark[0] -> lchild;
-  current ++;
-   }
+    /* TODO (midaction)*/ 
+    name_env[current++] = (char *)yystack.l_mark[0]->lchild; 
+  }
 break;
 case 11:
-#line 65 "grammar.y"
+#line 64 "grammar.y"
 	{ 
   /* TODO */
-  yyval = make_abs( yystack.l_mark[-3] -> lchild, yystack.l_mark[0] );
-  sfree( yystack.l_mark[-3] );
-  current --;
+  yyval = make_abs((char *)yystack.l_mark[-3]->lchild, yystack.l_mark[0]);
+  current--;
   }
 break;
 case 12:
-#line 72 "grammar.y"
+#line 70 "grammar.y"
 	{
-  /* TODO */ 
-  yyval = make_app( yystack.l_mark[-1], yystack.l_mark[0] );
+  /* TODO */
+  yyval = make_app(yystack.l_mark[-1], yystack.l_mark[0]);  
   }
 break;
-#line 527 "y.tab.c"
+#line 521 "y.tab.c"
     }
     yystack.s_mark -= yym;
     yystate = *yystack.s_mark;
