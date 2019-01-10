@@ -1,66 +1,30 @@
 graph {
 	node [shape=record]
-	0 [label="root|{{null|False}|{first|[1, 2, 4, 7, 10, 12]}|{last|[15]}|{follow|15}}"]
-	1 [label="\||{{null|False}|{first|[1, 2, 4, 7, 10, 12]}|{last|[9, 10, 11, 14]}|{follow|[15]}}"]
-	2 [label="\||{{null|False}|{first|[1, 2, 4, 7, 10]}|{last|[9, 10, 11]}|{follow|[15]}}"]
-	3 [label=".|{{null|False}|{first|[1, 2, 4, 7]}|{last|[9]}|{follow|[15]}}"]
-	4 [label=".|{{null|False}|{first|[1, 2, 4, 7]}|{last|[8]}|{follow|[9]}}"]
-	5 [label=".|{{null|False}|{first|[1, 2, 4, 7]}|{last|[7]}|{follow|[8]}}"]
-	6 [label="*|{{null|True}|{first|[1, 2, 4]}|{last|[1, 3, 5, 6]}|{follow|[7]}}"]
-	7 [label="\||{{null|False}|{first|[1, 2, 4]}|{last|[1, 3, 5, 6]}|{follow|[1, 2, 4, 7]}}"]
-	8 [label="\||{{null|False}|{first|[1, 2]}|{last|[1, 3]}|{follow|[1, 2, 4, 7]}}"]
-	9 [label="{a|{pos|1}}|{{null|False}|{first|[1]}|{last|[1]}|{follow|[1, 2, 4, 7]}}"]
-	8 -- 9
-	10 [label=".|{{null|False}|{first|[2]}|{last|[3]}|{follow|[1, 2, 4, 7]}}"]
-	11 [label="{b|{pos|2}}|{{null|False}|{first|[2]}|{last|[2]}|{follow|[3]}}"]
-	10 -- 11
-	12 [label="{c|{pos|3}}|{{null|False}|{first|[3]}|{last|[3]}|{follow|[1, 2, 4, 7]}}"]
-	10 -- 12
-	8 -- 10
-	7 -- 8
-	13 [label=".|{{null|False}|{first|[4]}|{last|[5, 6]}|{follow|[1, 2, 4, 7]}}"]
-	14 [label=".|{{null|False}|{first|[4]}|{last|[5]}|{follow|[1, 2, 4, 6, 7]}}"]
-	15 [label="{d|{pos|4}}|{{null|False}|{first|[4]}|{last|[4]}|{follow|[5]}}"]
-	14 -- 15
-	16 [label="{e|{pos|5}}|{{null|False}|{first|[5]}|{last|[5]}|{follow|[1, 2, 4, 6, 7]}}"]
-	14 -- 16
-	13 -- 14
-	17 [label="*|{{null|True}|{first|[6]}|{last|[6]}|{follow|[1, 2, 4, 7]}}"]
-	18 [label="{f|{pos|6}}|{{null|False}|{first|[6]}|{last|[6]}|{follow|[1, 2, 4, 6, 7]}}"]
-	17 -- 18
-	13 -- 17
-	7 -- 13
-	6 -- 7
-	5 -- 6
-	19 [label="{a|{pos|7}}|{{null|False}|{first|[7]}|{last|[7]}|{follow|[8]}}"]
-	5 -- 19
+	0 [label="root|{{null|False}|{first|[1, 5, 6]}|{last|[7]}|{follow|7}}"]
+	1 [label="\||{{null|False}|{first|[1, 5, 6]}|{last|[3, 4, 5, 6]}|{follow|[7]}}"]
+	2 [label="\||{{null|False}|{first|[1, 5]}|{last|[3, 4, 5]}|{follow|[7]}}"]
+	3 [label=".|{{null|False}|{first|[1]}|{last|[3, 4]}|{follow|[7]}}"]
+	4 [label=".|{{null|False}|{first|[1]}|{last|[3]}|{follow|[4, 7]}}"]
+	5 [label="{a|{pos|1}}|{{null|False}|{first|[1]}|{last|[1]}|{follow|[2]}}"]
 	4 -- 5
-	20 [label="{b|{pos|8}}|{{null|False}|{first|[8]}|{last|[8]}|{follow|[9]}}"]
-	4 -- 20
+	6 [label=".|{{null|False}|{first|[2]}|{last|[3]}|{follow|[4, 7]}}"]
+	7 [label="{b|{pos|2}}|{{null|False}|{first|[2]}|{last|[2]}|{follow|[3]}}"]
+	6 -- 7
+	8 [label="{c|{pos|3}}|{{null|False}|{first|[3]}|{last|[3]}|{follow|[4, 7]}}"]
+	6 -- 8
+	4 -- 6
 	3 -- 4
-	21 [label="{d|{pos|9}}|{{null|False}|{first|[9]}|{last|[9]}|{follow|[15]}}"]
-	3 -- 21
+	9 [label="*|{{null|True}|{first|[4]}|{last|[4]}|{follow|[7]}}"]
+	10 [label="{d|{pos|4}}|{{null|False}|{first|[4]}|{last|[4]}|{follow|[4, 7]}}"]
+	9 -- 10
+	3 -- 9
 	2 -- 3
-	22 [label=".|{{null|False}|{first|[10]}|{last|[10, 11]}|{follow|[15]}}"]
-	23 [label="{d|{pos|10}}|{{null|False}|{first|[10]}|{last|[10]}|{follow|[11, 15]}}"]
-	22 -- 23
-	24 [label="*|{{null|True}|{first|[11]}|{last|[11]}|{follow|[15]}}"]
-	25 [label="{c|{pos|11}}|{{null|False}|{first|[11]}|{last|[11]}|{follow|[11, 15]}}"]
-	24 -- 25
-	22 -- 24
-	2 -- 22
+	11 [label="{e|{pos|5}}|{{null|False}|{first|[5]}|{last|[5]}|{follow|[7]}}"]
+	2 -- 11
 	1 -- 2
-	26 [label=".|{{null|False}|{first|[12]}|{last|[14]}|{follow|[15]}}"]
-	27 [label=".|{{null|False}|{first|[12]}|{last|[13]}|{follow|[14]}}"]
-	28 [label="{a|{pos|12}}|{{null|False}|{first|[12]}|{last|[12]}|{follow|[13]}}"]
-	27 -- 28
-	29 [label="{b|{pos|13}}|{{null|False}|{first|[13]}|{last|[13]}|{follow|[14]}}"]
-	27 -- 29
-	26 -- 27
-	30 [label="{c|{pos|14}}|{{null|False}|{first|[14]}|{last|[14]}|{follow|[15]}}"]
-	26 -- 30
-	1 -- 26
+	12 [label="{f|{pos|6}}|{{null|False}|{first|[6]}|{last|[6]}|{follow|[7]}}"]
+	1 -- 12
 	0 -- 1
-	31 [label="{$|{pos|15}}|{{null|False}|{first|[15]}|{last|[15]}|{follow|15}}"]
-	0 -- 31
+	13 [label="{$|{pos|7}}|{{null|False}|{first|[7]}|{last|[7]}|{follow|7}}"]
+	0 -- 13
 }
