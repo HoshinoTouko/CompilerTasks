@@ -49,7 +49,7 @@ expr : INT
 
 | IF expr THEN expr ELSE expr FI { 
   /* TODO */ 
-  $$ = make_cond($2,$4,$6);
+  $$ = make_cond($2, $4, $6);
   } 
 
 | '(' expr ')' { 
